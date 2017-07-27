@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load render_bundle from webpack_loader %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  {% render_bundle 'main' 'css'%}
+</head>
+<body>
+  <div class="container">
+
+    <div class="alert alert-success">
+      <span class="pficon pficon-ok"></span>
+      <strong>Huzzah!</strong> Patternfly placeholder for <a href="#" class="alert-link">release latency app</a>.
+    </div>
+
+  </div>
+
+  {% render_bundle 'main' 'js' %}
+</body>
+</html>

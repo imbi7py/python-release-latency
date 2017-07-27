@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+behave = "*"
+splinter = "*"
+PyHamcrest = "*"
+
+[packages]
+Django = "*"
+djangorestframework = "*"
+django-webpack-loader = "*"

@@ -99,3 +99,13 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Webpack
+assets/bundles/
+webpack-stats.json
+
+# npm
+node_modules/
+
+# Local DB
+db.sqlite3
