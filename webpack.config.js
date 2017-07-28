@@ -75,7 +75,10 @@ module.exports = {
       // CSS loader
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap")
+        loader: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader?sourceMap"
+        })
       },
 
       //font/image url loaders

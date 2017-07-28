@@ -16,5 +16,5 @@ require('patternfly/dist/js/patternfly.min.js');
 require('moment/min/moment.min');
 
 // Patternfly styles
-require("css-loader!patternfly/dist/css/patternfly.css");
-require("css-loader!patternfly/dist/css/patternfly-additions.css");
+require("patternfly/dist/css/patternfly.css");
+require("patternfly/dist/css/patternfly-additions.css");
