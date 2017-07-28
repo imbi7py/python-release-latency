@@ -1,0 +1,16 @@
+implementation,version,python_version,release_date,kind
+CPython,3.6.0,,2016-12-23,full
+CPython,3.5.0,,2015-09-13,full
+CPython,3.4.0,,2014-03-16,full
+CPython,3.3.0,,2012-09-29,full
+CPython,3.2.0,,2011-02-20,full
+CPython,3.1.0,,2009-06-27,full
+CPython,3.0.0,,2008-12-03,full
+CPython,2.7.0,,2010-07-03,full
+CPython,2.6.0,,2008-10-01,full
+CPython,2.5.0,,2006-09-19,full
+CPython,2.4.0,,2004-11-30,full
+CPython,2.3.0,,2003-06-29,full
+CPython,2.2.0,,2001-12-21,full
+CPython,2.1.0,,2001-04-17,full
+CPython,2.0.0,,2000-10-16,full

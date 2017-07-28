@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'webpack_loader',
+    'django_extensions',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +103,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Remote API
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'PAGE_SIZE': 10
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

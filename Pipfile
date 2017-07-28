@@ -2,13 +2,15 @@
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 
+[packages]
+Django = "*"
+djangorestframework = "*"
+django-webpack-loader = "*"
+django-extensions = "*"
+
 [dev-packages]
 pylint = "*"
 behave = "*"
 splinter = "*"
 PyHamcrest = "*"
-
-[packages]
-Django = "*"
-djangorestframework = "*"
-django-webpack-loader = "*"
+pylint-django = "*"
