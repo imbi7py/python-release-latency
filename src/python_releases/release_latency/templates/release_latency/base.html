@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load render_bundle from webpack_loader %}
+
+<html lang="en" class="layout-pf layout-pf-fixed">
+
+<head>
+    <meta charset="UTF-8">
+    {% render_bundle 'main' 'css'%}
+</head>
+
+<body>
+    <!-- Top bar -->
+    <nav class="navbar navbar-pf-vertical">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+                <img class="navbar-brand-icon" src="/assets/img/logo-alt.svg" alt=""/>
+                <img class="navbar-brand-name" src="/assets/img/brand-alt.svg" alt="Python Redistributor Release Latency" />
+            </a>
+        </div>
+    </nav>
+
+    <!-- Collapsible side bar -->
+    <div class="nav-pf-vertical nav-pf-vertical-with-sub-menus hidden-icons-pf">
+        <ul class="list-group">
+            <li class="list-group-item"><a>
+                <span class="list-group-item-value">Upstream Releases</span>
+            </a></li>
+        </ul>
+    </div>
+
+    {% block html_content %}{% endblock html_content %} {% render_bundle 'main' 'js' %}
+    <script>
+        // Initialize the vertical navigation
+        $().setupVerticalNavigation(true);
+    </script>
+    {% block page_js %}{% endblock page_js %}
+</body>
+
+</html>

@@ -1,21 +1,132 @@
-<!DOCTYPE html>
-{% load render_bundle from webpack_loader %}
+{% extends "release_latency/base.html" %}
 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  {% render_bundle 'main' 'css'%}
-</head>
-<body>
-  <div class="container">
+{% block html_content %}
+<!-- Table HTML -->
+<table class="table table-striped table-bordered table-hover" id="table1">
+  <thead>
+    <tr>
+      <th>Python Implementation</th>
+      <th>Version</th>
+      <th>Release Date</th>
+      <th>Release Kind</th>
+    </tr>
+  </thead>
+</table>
 
-    <div class="alert alert-success">
-      <span class="pficon pficon-ok"></span>
-      <strong>Huzzah!</strong> Patternfly placeholder for <a href="#" class="alert-link">release latency app</a>.
-    </div>
-
+<!-- Blank Slate HTML -->
+<div class="blank-slate-pf table-view-pf-empty hidden" id="emptyState1">
+  <div class="blank-slate-pf-icon">
+    <span class="pficon pficon pficon-add-circle-o"></span>
   </div>
+  <h1>
+    No Python versions registered
+  </h1>
+  <p>
+    This should never happen, since the versions and release dates are harcoded :)
+  </p>
+</div>
+{% endblock html_content %}
 
-  {% render_bundle 'main' 'js' %}
-</body>
-</html>
+{% block page_js %}
+<script>
+    $(document).ready(function () {
+
+        // JSON data for Table View
+        var dataSet = [{
+            implementation: "CPython",
+            version: "3.6.0",
+            release_date: "2016-12-23",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "3.5.0",
+            release_date: "2015-09-13",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "3.4.0",
+            release_date: "2014-03-16",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "3.3.0",
+            release_date: "2012-09-29",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "3.2.0",
+            release_date: "2011-02-20",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "3.1.0",
+            release_date: "2009-06-27",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "3.0.0",
+            release_date: "2008-12-03",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.7.0",
+            release_date: "2010-07-03",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.6.0",
+            release_date: "2008-10-01",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.5.0",
+            release_date: "2006-09-19",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.4.0",
+            release_date: "2004-11-30",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.3.0",
+            release_date: "2003-06-29",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.2.0",
+            release_date: "2001-12-21",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.1.0",
+            release_date: "2001-04-17",
+            kind: "Full release"
+        }, {
+            implementation: "CPython",
+            version: "2.0.0",
+            release_date: "2000-10-16",
+            kind: "Full release"
+        }
+    ];
+
+        // DataTable Config
+        $("#table1").DataTable({
+            columns: [
+                { data: "implementation" },
+                { data: "version" },
+                { data: "release_date" },
+                { data: "kind" }
+            ],
+            data: dataSet,
+            dom: "t",
+            language: {
+                zeroRecords: "No records found"
+            },
+            order: [[1, 'asc']],
+        });
+
+    });
+
+</script>
+{% endblock page_js %}
