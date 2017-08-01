@@ -26,4 +26,4 @@ def check_displayed_releases(context):
                     for row in tbody.find_all("tr")]
     expected = [has_entries(r) for r in context._given_releases]
     assert_that(len(data), equal_to(len(expected)))
-    assert_that(data, contains_inanyorder(expected))
+    assert_that(data, contains_inanyorder(*expected))
