@@ -32,83 +32,32 @@
     $(document).ready(function () {
 
         // JSON data for Table View
-        var dataSet = [{
-            implementation: "CPython",
-            version: "3.6.0",
-            release_date: "2016-12-23",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "3.5.0",
-            release_date: "2015-09-13",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "3.4.0",
-            release_date: "2014-03-16",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "3.3.0",
-            release_date: "2012-09-29",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "3.2.0",
-            release_date: "2011-02-20",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "3.1.0",
-            release_date: "2009-06-27",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "3.0.0",
-            release_date: "2008-12-03",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.7.0",
-            release_date: "2010-07-03",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.6.0",
-            release_date: "2008-10-01",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.5.0",
-            release_date: "2006-09-19",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.4.0",
-            release_date: "2004-11-30",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.3.0",
-            release_date: "2003-06-29",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.2.0",
-            release_date: "2001-12-21",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.1.0",
-            release_date: "2001-04-17",
-            kind: "Full release"
-        }, {
-            implementation: "CPython",
-            version: "2.0.0",
-            release_date: "2000-10-16",
-            kind: "Full release"
-        }
-    ];
+        var dataSet = [
+            {
+                implementation: "CPython",
+                version: "3.6.0",
+                release_date: "2016-12-23",
+                kind: "full"
+            },
+            {
+                implementation: "CPython",
+                version: "3.6.2",
+                release_date: "2017-07-17",
+                kind: "full"
+            },
+            {
+                implementation: "PyPy",
+                version: "5.8",
+                release_date: "2017-06-09",
+                kind: "full"
+            },
+            {
+                implementation: "PyPy3",
+                version: "5.8",
+                release_date: "2017-06-09",
+                kind: "full"
+            }
+        ];
 
         // DataTable Config
         $("#table1").DataTable({
