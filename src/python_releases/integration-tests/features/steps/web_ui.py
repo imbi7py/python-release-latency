@@ -10,7 +10,7 @@ def visit_web_ui_page(context, link_text):
     context._browser = browser = splinter.Browser()
     context.resource_manager.enter_context(browser) # Ensure window is closed
     browser.visit(context.server_url)
-    browser.find_link_by_text(link_text).first.click()
+    browser.click_link_by_text(link_text)
 
 @then("the page title should be {expected_title}")
 def check_page_title(context, expected_title):
