@@ -7,8 +7,13 @@ class PythonImplementationSerializer(serializers.HyperlinkedModelSerializer):
         model = PythonImplementation
         fields = ('url', 'name')
 
+class _RelatedNameField(serializers.RelatedField):
+    def to_representation(self, value):
+        return value.name
 
 class PythonReleaseSerializer(serializers.HyperlinkedModelSerializer):
+    implementation = _RelatedNameField(read_only=True)
+
     class Meta:
         model = PythonRelease
         fields = ('url', 'implementation', 'version', 'release_date', 'kind')
